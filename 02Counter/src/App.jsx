@@ -8,11 +8,18 @@ function App() {
 
   //let counter = 15;
 
-  const addvalue = () => {
-    if (counter < 20) {
-      counter = counter + 1;
-      setCounter(counter);
-    }
+  // const addvalue = () => {
+  //   if (counter < 20) {
+  //     counter = counter + 1;
+  //     setCounter(counter);
+  //   }
+  // };
+
+  const prevValue = () => {
+    setCounter((prevValue) => prevValue + 1);
+    setCounter((prevValue) => prevValue + 1);
+    setCounter((prevValue) => prevValue + 1);
+    setCounter((prevValue) => prevValue + 1);
   };
 
   const removevalue = () => {
@@ -26,7 +33,8 @@ function App() {
     <>
       <h1>Chai aur react</h1>
       <h2>Counter value : {counter}</h2>
-      <button onClick={addvalue}>Add value{counter}</button>
+      {/* <button onClick={addvalue}>Add value{counter}</button> */}
+      <button onClick={prevValue}>prevValue{counter}</button>
       <button onClick={removevalue}>Remove value{counter}</button>
       <p>footer: {counter}</p>
     </>
